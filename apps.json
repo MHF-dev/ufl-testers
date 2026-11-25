@@ -1,0 +1,22 @@
+{
+  "siteTitle": "আমার অ্যাপ টেস্টিং হাব",
+  "developerName": "আপনার নাম",
+  "googleGroupUrl": "https://groups.google.com/g/YOUR-GROUP-NAME",
+  "testDays": 14,
+  "apps": [
+    {
+      "name": "উদাহরণ অ্যাপ ১",
+      "packageName": "com.example.app1",
+      "description": "এই অ্যাপটা কী করে তা এক-দুই লাইনে লিখুন।",
+      "icon": "",
+      "status": "testing"
+    },
+    {
+      "name": "উদাহরণ অ্যাপ ২",
+      "packageName": "com.example.app2",
+      "description": "দ্বিতীয় অ্যাপের ছোট বর্ণনা।",
+      "icon": "",
+      "status": "live"
+    }
+  ]
+}

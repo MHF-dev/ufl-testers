@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>অ্যাপ টেস্টিং হাব</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --text: #1b1f24; --muted: #5f6b7a;
+    --border: #e3e7ec; --accent: #0b8457; --accent-ink: #ffffff;
+    --accent-soft: #e5f4ed; --blue: #1a5fd0; --blue-soft: #e8f0fd;
+    --warn-soft: #fff6e0; --warn-ink: #7a5300;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12151a; --card: #1b2028; --text: #e8ecf1; --muted: #9aa6b4;
+      --border: #2b323d; --accent: #2fbf84; --accent-ink: #08140f;
+      --accent-soft: #173327; --blue: #7aa8f5; --blue-soft: #1a2740;
+      --warn-soft: #33290f; --warn-ink: #f0cf7a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Hind Siliguri", system-ui, sans-serif; line-height: 1.55;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+  header h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  header p { margin: 0; color: var(--muted); }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 18px; margin-top: 16px;
+  }
+  .step-title { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; margin: 0 0 6px; }
+  .num {
+    width: 28px; height: 28px; border-radius: 50%; background: var(--accent);
+    color: var(--accent-ink); display: grid; place-items: center; font-size: .95rem; flex: none;
+  }
+  .note { background: var(--warn-soft); color: var(--warn-ink); border-radius: 10px; padding: 10px 12px; font-size: .95rem; margin-top: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    padding: 10px 16px; border-radius: 10px; font-weight: 600; text-decoration: none;
+    font-size: .98rem; border: 1px solid transparent; min-height: 44px;
+  }
+  .btn-primary { background: var(--accent); color: var(--accent-ink); }
+  .btn-blue { background: var(--blue-soft); color: var(--blue); border-color: var(--blue-soft); }
+  .btn-outline { background: transparent; color: var(--text); border-color: var(--border); }
+  .apps { display: grid; gap: 12px; margin-top: 12px; }
+  .app { display: grid; grid-template-columns: 56px 1fr; gap: 14px; align-items: start; }
+  .app img, .app .ph {
+    width: 56px; height: 56px; border-radius: 12px; object-fit: cover;
+    background: var(--accent-soft); color: var(--accent); display: grid; place-items: center;
+    font-weight: 700; font-size: 1.4rem;
+  }
+  .app h3 { margin: 0; font-size: 1.1rem; }
+  .app p { margin: 2px 0 10px; color: var(--muted); font-size: .95rem; }
+  .tag { font-size: .75rem; padding: 2px 8px; border-radius: 99px; margin-left: 6px; vertical-align: middle; font-weight: 600; }
+  .tag.testing { background: var(--accent-soft); color: var(--accent); }
+  .tag.live { background: var(--blue-soft); color: var(--blue); }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  .filters button {
+    font: inherit; padding: 6px 14px; border-radius: 99px; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); cursor: pointer;
+  }
+  .filters button[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .muted { color: var(--muted); }
+  footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: .9rem; }
+  @media (max-width: 420px) { .actions .btn { flex: 1 1 100%; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1 id="title">অ্যাপ টেস্টিং হাব</h1>
+    <p id="subtitle">আমার অ্যাপগুলো টেস্ট করতে নিচের ধাপগুলো অনুসরণ করুন।</p>
+  </header>
+
+  <section class="card">
+    <div class="step-title"><span class="num">১</span> টেস্টার গ্রুপে জয়েন করুন (একবারই করতে হবে)</div>
+    <p class="muted">যে Gmail অ্যাকাউন্ট আপনার ফোনের প্লে স্টোরে চালু আছে, সেই অ্যাকাউন্ট দিয়ে জয়েন করুন। গ্রুপে জয়েন করলে নিচের সব অ্যাপ টেস্ট করতে পারবেন।</p>
+    <a id="groupBtn" class="btn btn-primary" href="#" target="_blank" rel="noopener">Google Group-এ জয়েন করুন</a>
+  </section>
+
+  <section class="card">
+    <div class="step-title"><span class="num">২</span> প্রতিটি অ্যাপে "টেস্টার হোন" চাপুন, তারপর ইন্সটল করুন</div>
+    <p class="muted">"টেস্টার হোন" পেজে <b>Become a tester</b> চাপুন। এরপর "ইন্সটল করুন" চেপে প্লে স্টোর থেকে ইন্সটল করুন।</p>
+    <div class="note" id="daysNote">অনুগ্রহ করে অ্যাপটি অন্তত ১৪ দিন ফোনে রাখুন এবং মাঝে মাঝে খুলুন। এতে অ্যাপটি প্লে স্টোরে পাবলিশ করতে সাহায্য হয়। 🙏</div>
+    <div class="filters" role="group" aria-label="ফিল্টার">
+      <button data-f="testing" aria-pressed="true">টেস্টিং চলছে</button>
+      <button data-f="all" aria-pressed="false">সব অ্যাপ</button>
+      <button data-f="live" aria-pressed="false">পাবলিশড</button>
+    </div>
+    <div id="apps" class="apps"><p class="muted">লোড হচ্ছে…</p></div>
+  </section>
+
+  <footer>সমস্যা হলে প্লে স্টোর অ্যাপ বন্ধ করে আবার খুলুন, অথবা কয়েক মিনিট পর আবার চেষ্টা করুন।</footer>
+</div>
+
+<script>
+  const BN = "০১২৩৪৫৬৭৮৯";
+  const bn = n => String(n).replace(/\d/g, d => BN[d]);
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const safeUrl = u => /^https:\/\//i.test(u || "") ? u : "";
+  const pkgOk = p => /^[A-Za-z][\w]*(\.[A-Za-z][\w]*)+$/.test(p || "");
+
+  let apps = [], filter = "testing";
+
+  function render() {
+    const box = document.getElementById("apps");
+    const list = apps.filter(a => filter === "all" || (a.status || "testing") === filter);
+    if (!list.length) { box.innerHTML = '<p class="muted">এই মুহূর্তে এখানে কোনো অ্যাপ নেই।</p>'; return; }
+    box.innerHTML = list.map(a => {
+      const pkg = pkgOk(a.packageName) ? a.packageName : "";
+      const status = (a.status || "testing") === "live" ? "live" : "testing";
+      const optIn = safeUrl(a.optInUrl) || (pkg && `https://play.google.com/apps/testing/${pkg}`);
+      const store = safeUrl(a.storeUrl) || (pkg && `https://play.google.com/store/apps/details?id=${pkg}`);
+      const icon = safeUrl(a.icon)
+        ? `<img src="${esc(a.icon)}" alt="" loading="lazy">`
+        : `<div class="ph">${esc((a.name || "?").trim().charAt(0))}</div>`;
+      const btns = [];
+      if (status === "testing" && optIn) btns.push(`<a class="btn btn-primary" href="${esc(optIn)}" target="_blank" rel="noopener">টেস্টার হোন</a>`);
+      if (store) btns.push(`<a class="btn ${status === "testing" ? "btn-blue" : "btn-primary"}" href="${esc(store)}" target="_blank" rel="noopener">ইন্সটল করুন</a>`);
+      return `<article class="card app" style="margin:0">
+        ${icon}
+        <div>
+          <h3>${esc(a.name)}<span class="tag ${status}">${status === "live" ? "পাবলিশড" : "টেস্টিং"}</span></h3>
+          <p>${esc(a.description)}</p>
+          <div class="actions">${btns.join("")}</div>
+        </div>
+      </article>`;
+    }).join("");
+  }
+
+  document.querySelectorAll(".filters button").forEach(b => b.addEventListener("click", () => {
+    filter = b.dataset.f;
+    document.querySelectorAll(".filters button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    render();
+  }));
+
+  fetch("apps.json?t=" + Date.now(), { cache: "no-store" })
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(cfg => {
+      if (cfg.siteTitle) { document.getElementById("title").textContent = cfg.siteTitle; document.title = cfg.siteTitle; }
+      if (cfg.developerName) document.getElementById("subtitle").textContent = `${cfg.developerName}-এর অ্যাপগুলো টেস্ট করতে নিচের ধাপগুলো অনুসরণ করুন।`;
+      const g = document.getElementById("groupBtn");
+      if (safeUrl(cfg.googleGroupUrl)) g.href = cfg.googleGroupUrl; else g.style.display = "none";
+      if (cfg.testDays) document.getElementById("daysNote").textContent =
+        `অনুগ্রহ করে অ্যাপটি অন্তত ${bn(cfg.testDays)} দিন ফোনে রাখুন এবং মাঝে মাঝে খুলুন। এতে অ্যাপটি প্লে স্টোরে পাবলিশ করতে সাহায্য হয়। 🙏`;
+      apps = Array.isArray(cfg.apps) ? cfg.apps : [];
+      if (!apps.some(a => (a.status || "testing") === "testing")) {
+        filter = "all";
+        document.querySelectorAll(".filters button").forEach(x => x.setAttribute("aria-pressed", x.dataset.f === "all"));
+      }
+      render();
+    })
+    .catch(() => {
+      document.getElementById("apps").innerHTML = '<p class="muted">অ্যাপের লিস্ট লোড করা যায়নি। কিছুক্ষণ পর পেজটি রিফ্রেশ করুন।</p>';
+    });
+</script>
+</body>
+</html>
