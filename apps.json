@@ -5,8 +5,8 @@
   "testDays": 14,
   "apps": [
     {
-      "name": "উদাহরণ অ্যাপ ১",
-      "packageName": "com.example.app1",
+      "name": "মুজাহিদ একাডেমি",
+      "packageName": "com.ummahfirstlabs.mujahid",
       "description": "এই অ্যাপটা কী করে তা এক-দুই লাইনে লিখুন।",
       "icon": "",
       "status": "testing"
