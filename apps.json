@@ -3,6 +3,12 @@
   "developerName": "UF Labs",
   "googleGroupUrl": "https://groups.google.com/g/uflabs-tester",
   "testDays": 14,
+  "donate": {
+    "title": "🤲 ইসলামিক অ্যাপ ডেভেলপমেন্টে সহযোগিতা করুন",
+    "text": "আপনার ছোট্ট সহযোগিতা আমাদের নতুন ইসলামিক অ্যাপ তৈরি ও পুরোনো অ্যাপগুলো সচল রাখতে সাহায্য করবে। জাযাকাল্লাহু খাইরান।",
+    "quote": "",
+    "methods": []
+  },
   "apps": [
     {
       "name": "মুজাহিদ একাডেমি",

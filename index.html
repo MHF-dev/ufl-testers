@@ -22,6 +22,7 @@
     }
   }
   * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
   body {
     margin: 0; background: var(--bg); color: var(--text);
     font-family: "Hind Siliguri", system-ui, sans-serif; line-height: 1.55;
@@ -67,15 +68,29 @@
   }
   .filters button[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
   .muted { color: var(--muted); }
+  .donate h2 { margin: 0 0 6px; font-size: 1.15rem; }
+  .donate .ayah { font-style: italic; color: var(--muted); border-left: 3px solid var(--accent); padding-left: 10px; margin: 10px 0; }
+  .methods { display: grid; gap: 10px; margin-top: 12px; }
+  .method { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+    border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
+  .method b { display: block; }
+  .method .val, .method small { display: block; }
+  .method .val { font-size: 1.05rem; letter-spacing: .5px; word-break: break-all; }
+  .method small { color: var(--muted); }
+  .head-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+  button.btn { font: inherit; font-weight: 600; cursor: pointer; }
   footer { margin-top: 28px; text-align: center; color: var(--muted); font-size: .9rem; }
   @media (max-width: 420px) { .actions .btn { flex: 1 1 100%; } }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <h1 id="title">UF Labs টেস্টিং হাব</h1>
-    <p id="subtitle">আমার অ্যাপগুলো টেস্ট করতে নিচের ধাপগুলো অনুসরণ করুন।</p>
+  <header class="head-row">
+    <div>
+      <h1 id="title">UF Labs টেস্টিং হাব</h1>
+      <p id="subtitle">আমার অ্যাপগুলো টেস্ট করতে নিচের ধাপগুলো অনুসরণ করুন।</p>
+    </div>
+    <a id="donateTop" class="btn btn-outline" href="#donate" hidden>🤲 ডোনেট করুন</a>
   </header>
 
   <section class="card">
@@ -94,6 +109,13 @@
       <button data-f="live" aria-pressed="false">পাবলিশড</button>
     </div>
     <div id="apps" class="apps"><p class="muted">লোড হচ্ছে…</p></div>
+  </section>
+
+  <section class="card donate" id="donate" hidden>
+    <h2 id="donateTitle">🤲 ইসলামিক অ্যাপ ডেভেলপমেন্টে সহযোগিতা করুন</h2>
+    <p class="muted" id="donateText"></p>
+    <p class="ayah" id="donateQuote" hidden></p>
+    <div class="methods" id="methods"></div>
   </section>
 
   <footer>সমস্যা হলে প্লে স্টোর অ্যাপ বন্ধ করে আবার খুলুন, অথবা কয়েক মিনিট পর আবার চেষ্টা করুন।</footer>
@@ -140,6 +162,41 @@
     render();
   }));
 
+  function renderDonate(d) {
+    if (!d || !Array.isArray(d.methods)) return;
+    const items = d.methods.filter(m => m && m.name && (m.number || safeUrl(m.url)));
+    if (!items.length) return;
+    if (d.title) document.getElementById("donateTitle").textContent = d.title;
+    document.getElementById("donateText").textContent = d.text || "";
+    if (d.quote) { const q = document.getElementById("donateQuote"); q.textContent = d.quote; q.hidden = false; }
+    document.getElementById("methods").innerHTML = items.map((m, i) => {
+      const action = m.number
+        ? `<button class="btn btn-primary" data-copy="${esc(m.number)}">কপি করুন</button>`
+        : `<a class="btn btn-primary" href="${esc(m.url)}" target="_blank" rel="noopener">ডোনেট করুন</a>`;
+      return `<div class="method">
+        <div><b>${esc(m.name)}</b>${m.number ? `<span class="val">${esc(m.number)}</span>` : ""}${m.note ? `<small>${esc(m.note)}</small>` : ""}</div>
+        ${action}
+      </div>`;
+    }).join("");
+    document.getElementById("donate").hidden = false;
+    document.getElementById("donateTop").hidden = false;
+  }
+
+  document.addEventListener("click", e => {
+    const b = e.target.closest("[data-copy]");
+    if (!b) return;
+    const done = () => { const t = b.textContent; b.textContent = "কপি হয়েছে ✓"; setTimeout(() => b.textContent = t, 1600); };
+    const v = b.dataset.copy;
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(v).then(done, () => fallbackCopy(v, done));
+    else fallbackCopy(v, done);
+  });
+  function fallbackCopy(v, done) {
+    const t = document.createElement("textarea"); t.value = v; t.style.position = "fixed"; t.style.opacity = "0";
+    document.body.appendChild(t); t.select();
+    try { document.execCommand("copy"); done(); } catch (_) {}
+    t.remove();
+  }
+
   fetch("apps.json?t=" + Date.now(), { cache: "no-store" })
     .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(cfg => {
@@ -149,6 +206,7 @@
       if (safeUrl(cfg.googleGroupUrl)) g.href = cfg.googleGroupUrl; else g.style.display = "none";
       if (cfg.testDays) document.getElementById("daysNote").textContent =
         `অনুগ্রহ করে অ্যাপটি অন্তত ${bn(cfg.testDays)} দিন ফোনে রাখুন এবং মাঝে মাঝে খুলুন। এতে অ্যাপটি প্লে স্টোরে পাবলিশ করতে সাহায্য হয়। 🙏`;
+      renderDonate(cfg.donate);
       apps = Array.isArray(cfg.apps) ? cfg.apps : [];
       if (!apps.some(a => (a.status || "testing") === "testing")) {
         filter = "all";
