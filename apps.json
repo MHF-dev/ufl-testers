@@ -41,10 +41,8 @@
     {
       "name": "মুজাহিদ একাডেমি",
       "packageName": "com.ummahfirstlabs.mujahid",
-      "description": "Mujahid Academy is an educational Islamic game for children. Here, your child will become a young student and enroll in the academy and will receive training in three areas: body, mind and character. He will learn courage, patience, discipline and good morals from the sports and true stories of the Seerah encouraged by the Prophet ﷺ and his companions.
-",
+      "description": "Mujahid Academy is an educational Islamic game for children. Here, your child will become a young student and enroll in the academy and will receive training in three areas: body, mind and character. He will learn courage, patience, discipline and good morals from the sports and true stories of the Seerah encouraged by the Prophet ﷺ and his companions.",
       "icon": "https://lh3.googleusercontent.com/pcsb/AEecphagkFfnZlBAa-6ZTO5wbDES6wh1CSoDPKTr5YN_ZONhSF4-VpwDT3SZcvyh7ccck1-84r8yzUQg59IIzO68y7x4KxMZElY=h180",
-",
       "status": "testing"
     },
     {
@@ -53,13 +51,11 @@
       "description": "Never miss your daily adhkar again. Dhikr Time plays the authentic remembrances from Hisnul Muslim automatically — at the time you choose, even when your phone is locked and the screen is off.",
       "icon": "https://lh3.googleusercontent.com/pcsb/AEecphagkFfnZlBAa-6ZTO5wbDES6wh1CSoDPKTr5YN_ZONhSF4-VpwDT3SZcvyh7ccck1-84r8yzUQg59IIzO68y7x4KxMZElY=h180",
       "status": "testing"
-    }
-        {
+    },
+    {
       "name": "রেহাল — হিফজখানার ডিজিটাল খাতা",
       "packageName": "com.ummahfirstlabs.rehal",
-      "description": "Rehal is a Bangla digital register for Hifz madrasas, Noorani and Maktab classes.
-
-Teachers record each student's daily sabaq, sabqi (sat sabaq), manzil (amukhta) and attendance in under a minute, instead of paper registers. Guardians follow their child's progress through a private link, with no app or login needed. The muhtamim sees at a glance who hasn't entered today, which students are falling behind, and the fee and donation accounts",
+      "description": "Rehal is a Bangla digital register for Hifz madrasas, Noorani and Maktab classes. Teachers record each student's daily sabaq, sabqi (sat sabaq), manzil (amukhta) and attendance in under a minute, instead of paper registers. Guardians follow their child's progress through a private link, with no app or login needed. The muhtamim sees at a glance who hasn't entered today, which students are falling behind, and the fee and donation accounts",
       "icon": "https://lh3.googleusercontent.com/xrcnuDvlPvyxpZX1F-0wdm7NoOBko26BInfWoiONFKKXqHVith8AZY9B8zMNxWipVztpwM45WMjcPABfFY2w1Ko=h180",
       "status": "testing"
     }
