@@ -70,6 +70,13 @@
   .muted { color: var(--muted); }
   .donate h2 { margin: 0 0 6px; font-size: 1.15rem; }
   .donate .ayah { font-style: italic; color: var(--muted); border-left: 3px solid var(--accent); padding-left: 10px; margin: 10px 0; }
+  .reasons { display: grid; gap: 10px; margin: 14px 0 4px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+  .reason { display: flex; gap: 10px; align-items: flex-start; background: var(--accent-soft); border-radius: 12px; padding: 12px; }
+  .reason .ic { font-size: 1.4rem; line-height: 1.2; flex: none; }
+  .reason b { display: block; }
+  .reason span { color: var(--muted); font-size: .93rem; }
+  .ayah small { display: block; font-style: normal; margin-top: 4px; }
+  .methods-title { font-weight: 700; margin: 16px 0 0; }
   .methods { display: grid; gap: 10px; margin-top: 12px; }
   .method { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
     border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
@@ -114,7 +121,9 @@
   <section class="card donate" id="donate" hidden>
     <h2 id="donateTitle">🤲 ইসলামিক অ্যাপ ডেভেলপমেন্টে সহযোগিতা করুন</h2>
     <p class="muted" id="donateText"></p>
+    <div class="reasons" id="reasons"></div>
     <p class="ayah" id="donateQuote" hidden></p>
+    <p class="methods-title">যেভাবে ডোনেট করবেন</p>
     <div class="methods" id="methods"></div>
   </section>
 
@@ -168,7 +177,15 @@
     if (!items.length) return;
     if (d.title) document.getElementById("donateTitle").textContent = d.title;
     document.getElementById("donateText").textContent = d.text || "";
-    if (d.quote) { const q = document.getElementById("donateQuote"); q.textContent = d.quote; q.hidden = false; }
+    if (Array.isArray(d.reasons)) document.getElementById("reasons").innerHTML = d.reasons
+      .filter(r => r && r.title)
+      .map(r => `<div class="reason"><span class="ic">${esc(r.icon || "✅")}</span><div><b>${esc(r.title)}</b><span>${esc(r.text)}</span></div></div>`).join("");
+    if (d.quote) {
+      const q = document.getElementById("donateQuote");
+      q.textContent = d.quote;
+      if (d.quoteSource) { const sm = document.createElement("small"); sm.textContent = "— " + d.quoteSource; q.appendChild(sm); }
+      q.hidden = false;
+    }
     document.getElementById("methods").innerHTML = items.map((m, i) => {
       const action = m.number
         ? `<button class="btn btn-primary" data-copy="${esc(m.number)}">কপি করুন</button>`
