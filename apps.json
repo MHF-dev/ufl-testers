@@ -49,7 +49,7 @@
       "name": "Dhikr Time: Auto Play Adhkar",
       "packageName": "com.ummahfirstlabs.dhikrtime",
       "description": "হিসনুল মুসলিম থেকে সহিহ আজকার আপনার বেছে নেওয়া সময়ে নিজে থেকেই বাজবে, ফোন লক থাকলেও। আর কখনো দৈনিক জিকির মিস হবে না।",
-      "icon": "https://lh3.googleusercontent.com/pcsb/AEecphagkFfnZlBAa-6ZTO5wbDES6wh1CSoDPKTr5YN_ZONhSF4-VpwDT3SZcvyh7ccck1-84r8yzUQg59IIzO68y7x4KxMZElY=h180",
+      "icon": "https://lh3.googleusercontent.com/oJxI1PWAQgan0Qc72xSu9cmCFTwN47YmybIHzg4cBgI9HSSzN38GbAbAWxMLyAd6u0lPe8YFpA1GRyVdJiy0",
       "status": "testing"
     },
     {
@@ -57,6 +57,13 @@
       "packageName": "com.ummahfirstlabs.rehal",
       "description": "হিফজখানা, নূরানী ও মক্তবের ডিজিটাল খাতা। শিক্ষক এক মিনিটে সবক, সাতসবক, আমুখতা ও হাজিরা লিখবেন, আর অভিভাবক একটা লিংকেই সন্তানের অগ্রগতি দেখবেন।",
       "icon": "https://lh3.googleusercontent.com/xrcnuDvlPvyxpZX1F-0wdm7NoOBko26BInfWoiONFKKXqHVith8AZY9B8zMNxWipVztpwM45WMjcPABfFY2w1Ko=h180",
+      "status": "testing"
+    }
+        {
+      "name": "কুরবা: পারিবারিক বৃক্ষ ও দোয়া",
+      "packageName": "com.ummahfirstlabs.qurba",
+      "description": "একটি ইসলামিক বংশক্রম অ্যাপ। জীবিত আত্মীয়দের সাথে আত্মীয়তার সম্পর্ক (সিলাতুর রাহিম) বজায় রাখতে এবং মরহুমদের দোয়ায় স্মরণ করতে সাহায্য করে।",
+      "icon": "https://lh3.googleusercontent.com/pcsb/AEecphaT9EPuxpARYEavHhSGN_jvkOpIPfAibUiq1KBzbIh7DdG0VwwUq1t48jpFwsqFc3AYNIiv6rlJo7s5_24n2XLSs37_GA",
       "status": "testing"
     }
   ]
