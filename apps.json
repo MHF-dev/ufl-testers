@@ -69,9 +69,24 @@
         {
       "name": "মুহাসাবাহ - ইসলামিক ট্র্যাকার",
       "packageName": "com.ummahfirstlabs.muhasabah",
-      "description": "নামাজ, কুরআন, জিকির ও আমলের হিসাব",
+      "description": "নামাজ, কুরআন, জিকির ও আমলের হিসাব করুন হিসাব দেওয়ার আগেই",
       "icon": "https://lh3.googleusercontent.com/pcsb/AEecphZXWAYcOyJrRXjFysuctxPM4gaK2d4dKBPy0Cu8cwVYzvcswpGCo1XutHFt-miR3OHr5fSrFFiG4ZJHMBmX6CbzzygmdcU",
       "status": "testing"
+    },
+        {
+      "name": "হিফজ যাত্রা: কোরআন হিফজ",
+      "packageName": "com.ummahfirstlabs.hifzjatra",
+      "description": "আপনার নিজস্ব সময়ে, নিজস্ব গতিতে, কোরআন হিফজ করুন সহজ ও বৈজ্ঞানিক পদ্ধতিতে, নিজে নিজেই বা অভিজ্ঞ ওস্তাদের সহায়তায়।",
+      "icon": "https://lh3.googleusercontent.com/olXAIVIHVODRNcVJjy8jqfrBAaAQ9_h7RQlT_QKdlrNPXlTGctWTrqHVaIGUYBvaDnVGLH3U8cziq4ymZ_R_Stg",
+      "status": "live"
+    },
+        {
+      "name": "হিফজ যাত্রা: কোরআন হিফজ",
+      "packageName": "com.ummahfirstlabs.hifzjatra",
+      "description": "আপনার নিজস্ব সময়ে, নিজস্ব গতিতে, কোরআন হিফজ করুন সহজ ও বৈজ্ঞানিক পদ্ধতিতে, নিজে নিজেই বা অভিজ্ঞ ওস্তাদের সহায়তায়।",
+      "icon": "https://lh3.googleusercontent.com/olXAIVIHVODRNcVJjy8jqfrBAaAQ9_h7RQlT_QKdlrNPXlTGctWTrqHVaIGUYBvaDnVGLH3U8cziq4ymZ_R_Stg",
+      "status": "live"
     }
+    
   ]
 }
