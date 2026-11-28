@@ -58,12 +58,19 @@
       "description": "হিফজখানা, নূরানী ও মক্তবের ডিজিটাল খাতা। শিক্ষক এক মিনিটে সবক, সাতসবক, আমুখতা ও হাজিরা লিখবেন, আর অভিভাবক একটা লিংকেই সন্তানের অগ্রগতি দেখবেন।",
       "icon": "https://lh3.googleusercontent.com/xrcnuDvlPvyxpZX1F-0wdm7NoOBko26BInfWoiONFKKXqHVith8AZY9B8zMNxWipVztpwM45WMjcPABfFY2w1Ko=h180",
       "status": "testing"
-    }
+    },
         {
       "name": "কুরবা: পারিবারিক বৃক্ষ ও দোয়া",
       "packageName": "com.ummahfirstlabs.qurba",
       "description": "একটি ইসলামিক বংশক্রম অ্যাপ। জীবিত আত্মীয়দের সাথে আত্মীয়তার সম্পর্ক (সিলাতুর রাহিম) বজায় রাখতে এবং মরহুমদের দোয়ায় স্মরণ করতে সাহায্য করে।",
       "icon": "https://lh3.googleusercontent.com/pcsb/AEecphaT9EPuxpARYEavHhSGN_jvkOpIPfAibUiq1KBzbIh7DdG0VwwUq1t48jpFwsqFc3AYNIiv6rlJo7s5_24n2XLSs37_GA",
+      "status": "testing"
+    },
+        {
+      "name": "মুহাসাবাহ - ইসলামিক ট্র্যাকার",
+      "packageName": "com.ummahfirstlabs.muhasabah",
+      "description": "নামাজ, কুরআন, জিকির ও আমলের হিসাব",
+      "icon": "https://lh3.googleusercontent.com/pcsb/AEecphZXWAYcOyJrRXjFysuctxPM4gaK2d4dKBPy0Cu8cwVYzvcswpGCo1XutHFt-miR3OHr5fSrFFiG4ZJHMBmX6CbzzygmdcU",
       "status": "testing"
     }
   ]
