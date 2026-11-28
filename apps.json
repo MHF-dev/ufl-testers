@@ -88,11 +88,39 @@
       "status": "live"
     },
         {
-      "name": "Kalimah - Quran Vocabularyরা",
+      "name": "Kalimah - Quran Vocabulary",
       "packageName": "com.ummahfirstlabs.kalimah",
       "description": "কুইজ ও খেলায় খেলায় কুরআনের ১০০% শব্দ শিখুন।",
       "icon": "https://lh3.googleusercontent.com/eHFHNQSXlfisIb-sXZ6AyoQ8zVzSpZtEvCEj_NulyXlMJzR9CgtxINorLj9VOArAgJrkmH3C9FVWArRbeq9LLA",
       "status": "live"
+    },
+        {
+      "name": "ছোটদের নবীজী ﷺ",
+      "packageName": "com.ummahfirstlabs.chotodernabiji",
+      "description": "শিশুদের জন্য নবীজী ﷺ-এর গল্প, সুন্নাহ, দরুদ ও দোয়া। বিজ্ঞাপনমুক্ত ও অফলাইন।",
+      "icon": "https://lh3.googleusercontent.com/pcsb/AEecphYuQoCB6dl_0T4WjHtnmg8IgHAWeAs-yZiEssXBn2akZDavuGfOJo3ArYxZb0Gln3-afsuwwhzE5tOEaBn3yJ12P18_3Bc",
+      "status": "testing"
+    },
+        {
+      "name": "নূরের খেলাঘর: আরবি ও ইসলাম",
+      "packageName": "com.ummahfirstlabs.noor",
+      "description": "৪ থেকে ১২ বছরের বাচ্চারা খেলতে খেলতে শিখবে আরবি হরফ, নূরানী কায়দা, কুরআনের ছোট সূরা, প্রতিদিনের আরবি কথা, মাসনূন দোয়া আর নবী-রাসূলের গল্প।",
+      "icon": "https://lh3.googleusercontent.com/pcsb/AEecphZ1FMrfFBQOjQMTIQlStcR0HQG6fhXDfRQysWvoSbFHprQEaQc0cvGeoixkCItPcJ4V0lltLodxCG-vKVxyLpac6h6o5He9",
+      "status": "testing"
+    },
+        {
+      "name": "খুদে ইঞ্জিনিয়ার: শিশুদের STEM",
+      "packageName": "com.ummahfirstlabs.ltl_engineer",
+      "description": "বাচ্চারা স্বভাবতই ক্রিয়েটিভ। তারা প্রতিনিয়ত নতুন কিছু ভাঙে আর গড়ে। খুদে ইঞ্জিনিয়ার এই কৌতূহলকেই কাজে লাগায়। ৪ থেকে ১০ বছরের শিশুরা খেলতে খেলতে ইঞ্জিনিয়ারিংয়ের মজার জগৎ চিনবে",
+      "icon": "https://lh3.googleusercontent.com/pcsb/AEecphb_FrbQA073ONG8G1QQmt6mN5-aTtmQrUXJdhP3rHVr7UeLGwZG6-TnZog-jJtaxn0WbyUklZd0hPQaYe8WnEejOo9BgKk",
+      "status": "testing"
+    },
+        {
+      "name": "আরবি বলি: নবী ﷺ-এর ভাষায়",
+      "packageName": "com.ummahfirstlabs.arbi",
+      "description": "বাংলাভাষীদের জন্য ১২০ দিনে আরবিতে কথা বলা শেখার ফ্রি, অফলাইন Android অ্যাপ।",
+      "icon": "https://lh3.googleusercontent.com/pcsb/AEecphY7xvD9Iq1XysuuWsbv1FQGxUViuLqawvHYdaBAratMMHiFnZz12ZM183gZuwMlWc0QbincpI4iUDwZ3F3eHP_cS5IaZg",
+      "status": "testing"
     }
     
   ]
