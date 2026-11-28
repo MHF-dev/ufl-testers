@@ -81,13 +81,6 @@
       "status": "live"
     },
         {
-      "name": "হিফজ যাত্রা: কোরআন হিফজ",
-      "packageName": "com.ummahfirstlabs.hifzjatra",
-      "description": "আপনার নিজস্ব সময়ে, নিজস্ব গতিতে, কোরআন হিফজ করুন সহজ ও বৈজ্ঞানিক পদ্ধতিতে, নিজে নিজেই বা অভিজ্ঞ ওস্তাদের সহায়তায়।",
-      "icon": "https://lh3.googleusercontent.com/olXAIVIHVODRNcVJjy8jqfrBAaAQ9_h7RQlT_QKdlrNPXlTGctWTrqHVaIGUYBvaDnVGLH3U8cziq4ymZ_R_Stg",
-      "status": "live"
-    },
-        {
       "name": "Seerah Journeys - সীরাহ যাত্রা",
       "packageName": "com.ummahfirstlabs.seerahjatra",
       "description": "রাসুলুল্লাহ সাল্লালাহু আলাইহি ওয়া সাল্লামের সীরাত জানুন ইন্টারেক্টিভ ম্যাপের মাধ্যমে।",
